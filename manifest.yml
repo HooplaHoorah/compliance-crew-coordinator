@@ -1,0 +1,21 @@
+modules:
+  jira:issuePanel:
+    - key: compliance-crew-coordinator-issue-panel
+      title: Compliance Audit
+      description: Run compliance checks on this issue
+      icon: https://developer.atlassian.com/platform/forge/images/forge-icon.svg
+      resource: compliance-ui
+      resolver: compliance-resolver
+      render: main
+resources:
+  - key: compliance-ui
+    path: src/frontend/index.jsx
+function:
+  - key: compliance-resolver
+    handler: src/index.run
+app:
+  id: "ari:cloud:ecosystem::app/00000000-0000-0000-0000-000000000000"
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
