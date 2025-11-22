@@ -7,6 +7,14 @@ modules:
       resource: compliance-ui
       resolver: compliance-resolver
       render: main
+  confluence:macro:
+    - key: compliance-crew-coordinator-macro
+      title: Compliance Audit
+      description: Run compliance checks on this page
+      icon: https://developer.atlassian.com/platform/forge/images/forge-icon.svg
+      resource: compliance-ui
+      resolver: compliance-resolver
+      render: main
 resources:
   - key: compliance-ui
     path: src/frontend/index.jsx
@@ -19,3 +27,4 @@ permissions:
   scopes:
     - read:jira-work
     - write:jira-work
+    - read:confluence-content.all
