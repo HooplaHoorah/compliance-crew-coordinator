@@ -1,0 +1,29 @@
+modules:
+  jira:issuePanel:
+    - key: compliance-crew-coordinator-issue-panel
+      resource: main
+      resolver:
+        function: compliance-resolver
+      render: native
+      title: Compliance Crew Coordinator
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+
+  function:
+    - key: compliance-resolver
+      handler: index.handler
+
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+
+permissions:
+  scopes:
+    - read:jira-work
+    # add more later if we need them, e.g. write:jira-work
+
+app:
+  id: ari:cloud:ecosystem::app/97348e13-0de9-4574-98c9-4096cd9d402a
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

@@ -1,0 +1,19 @@
+{
+  "name": "compliance-crew-coordinator",
+  "version": "1.0.0",
+  "description": "Forge app skeleton for Compliance Crew Coordinator",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "forge lint",
+    "deploy": "forge deploy",
+    "tunnel": "forge tunnel"
+  },
+  "dependencies": {
+    "@forge/api": "^3.0.0",
+    "@forge/bridge": "^5.8.0",
+    "@forge/react": "^11.7.0",
+    "@forge/resolver": "^1.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.2.0"
+  }
+}
